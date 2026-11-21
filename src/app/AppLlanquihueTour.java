@@ -37,6 +37,7 @@ public class AppLlanquihueTour {
      */
     public static void main(String[] args){
         // Incorporación de los datos de la primera persona, en este caso, un cliente
+        /*
         Direccion direccionC1= new Direccion("Los Alerces", 125, "Puerto Varas", "Puerto Varas");
         Rut rutC1 = new Rut(12345678, '5');
         Cliente cliente1 = new Cliente("Pedro", "Gonzalez", direccionC1, rutC1, "CLI001", true);
@@ -50,6 +51,7 @@ public class AppLlanquihueTour {
         System.out.println(cliente1);
         System.out.println("\n--------Nuevo registro--------");
         System.out.println(empleado1);
+        */
         
         
         // Datos para probar nuevos ingresos (eliminar /* y */ para realizar pruebas)
@@ -104,8 +106,13 @@ public class AppLlanquihueTour {
         */
         
         System.out.println("\n--- CARGA DE ARCHIVO TXT ---");
+        
+        GestionPersonas gestion = new GestionPersonas();
 
         CargarPersonas carga = new CargarPersonas();
-        carga.cargarArchivo("personas.txt");
+        carga.cargarArchivo("personas.txt", gestion);
+        
+        System.out.println("\n--- PERSONAS CARGADAS ---");
+        gestion.mostrarPersonas();
     }
 }

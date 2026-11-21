@@ -5,7 +5,6 @@
 package service;
 
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 import model.Persona;
 
 /**
