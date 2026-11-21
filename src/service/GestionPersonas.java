@@ -5,6 +5,8 @@
 package service;
 
 import java.util.ArrayList;
+import model.Cliente;
+import model.Empleado;
 import model.Persona;
 
 /**
@@ -58,5 +60,41 @@ public class GestionPersonas{
         }
         
         return null;
+    }
+    
+    public void mostrarClientes(){
+        System.out.println("\n--- LISTADO DE CIENTES ---");
+        
+        boolean encontrados = false;
+        
+        for(Persona persona : personas){
+            if(persona instanceof Cliente){
+                System.out.println(persona);
+                System.out.println("--------------------------");
+                encontrados = true;
+            }
+        }
+        
+        if(!encontrados){
+            System.out.println("No existen clientes registrados.");
+        }
+    }
+    
+    public void mostrarEmpleados(){
+        System.out.println("\n--- LISTADO DE CLIENTES ---");
+        
+        boolean encontrados = false;
+        
+        for(Persona persona : personas){
+            if(persona instanceof Empleado){
+                System.out.println(persona);
+                System.out.println("--------------------------");
+                encontrados = true;
+            }
+        }
+        
+        if(!encontrados){
+            System.out.println("No existen empleados registrados.");
+        }
     }
 }

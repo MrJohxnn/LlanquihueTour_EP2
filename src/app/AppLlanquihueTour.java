@@ -8,6 +8,7 @@ import data.CargarPersonas;
 import model.Cliente;
 import model.Empleado;
 import model.Direccion;
+import model.Persona;
 import service.GestionPersonas;
 import utiles.Rut;
 
@@ -112,7 +113,25 @@ public class AppLlanquihueTour {
         CargarPersonas carga = new CargarPersonas();
         carga.cargarArchivo("personas.txt", gestion);
         
-        System.out.println("\n--- PERSONAS CARGADAS ---");
+       
+        System.out.println("\n--- PERSONAS CARGADAS ---"); //Muestra personas cargadas
         gestion.mostrarPersonas();
+        
+        System.out.println("\n--- PRUEBA DE FILTROS ---"); //Muestra a las personas diferenciadas según el tipo de usuario (cliente o empleado)
+
+        gestion.mostrarClientes();
+
+        gestion.mostrarEmpleados();
+        
+        System.out.println("\n--- BUSQUEDA POR RUT ---"); //Busca a personas por rut
+
+        Persona encontrada = gestion.buscarPorRut("99999999-9");
+
+        if (encontrada != null) {
+            System.out.println("Persona encontrada:");
+            System.out.println(encontrada);
+        } else {
+            System.out.println("No se encontró una persona con ese RUT.");
+}
     }
 }
