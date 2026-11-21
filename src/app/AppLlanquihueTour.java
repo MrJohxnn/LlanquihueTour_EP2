@@ -125,7 +125,7 @@ public class AppLlanquihueTour {
         
         System.out.println("\n--- BUSQUEDA POR RUT ---"); //Busca a personas por rut
 
-        Persona encontrada = gestion.buscarPorRut("99999999-9");
+        Persona encontrada = gestion.buscarPorRut("12.345.678-5");
 
         if (encontrada != null) {
             System.out.println("Persona encontrada:");

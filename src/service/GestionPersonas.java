@@ -53,13 +53,21 @@ public class GestionPersonas{
     }
     
     public Persona buscarPorRut(String rutBuscado){
-        for(Persona persona : personas){
-            if(persona.getRut().toString().equalsIgnoreCase(rutBuscado)){
-                return persona;
+        if(rutBuscado == null){
+            return null;
             }
-        }
-        
-        return null;
+            
+            String rutNormalizado = rutBuscado.replace(".", "").replace("-", "").replace(" ", "").toUpperCase();
+            
+            for(Persona persona : personas){
+                if(persona.getRut() != null){
+                    String rutRegistrado = persona.getRut().toString().replace(".", "").replace("-", "").replace(" ", "").toUpperCase();
+                    if(rutRegistrado.equals(rutNormalizado)){
+                        return persona;
+                    }
+                }
+            }
+            return null;
     }
     
     public void mostrarClientes(){
