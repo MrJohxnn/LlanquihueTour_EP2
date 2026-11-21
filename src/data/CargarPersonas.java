@@ -65,6 +65,7 @@ public class CargarPersonas {
                 }
                 catch(NumberFormatException | ArrayIndexOutOfBoundsException e){
                     System.out.println("Error en registro: " + linea);
+                    System.out.println("Detalle del error: " + e.getMessage());
                 }
             }
         }
