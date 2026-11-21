@@ -109,7 +109,6 @@ public class AppLlanquihueTour {
         System.out.println("\n--- CARGA DE ARCHIVO TXT ---");
         
         GestionPersonas gestion = new GestionPersonas();
-
         CargarPersonas carga = new CargarPersonas();
         carga.cargarArchivo("personas.txt", gestion);
         
