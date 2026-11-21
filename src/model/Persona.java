@@ -21,7 +21,8 @@ public class Persona {
     private Rut rut;
 
     /**
-     * Construye el registro de la persona con los datos ingresados, heredando Direccion y Rut desde sus respectivas clases.
+     * Construye el registro de la persona con los datos ingresados
+     * Utiliza composición mediante objetos Direccion y Rut.
      * @param nombre Nombre de la persona.
      * @param apellido Apellido de la persona.
      * @param direccion Dirección de la persona.

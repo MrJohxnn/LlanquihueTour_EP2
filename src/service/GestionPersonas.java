@@ -89,7 +89,7 @@ public class GestionPersonas{
     }
     
     public void mostrarEmpleados(){
-        System.out.println("\n--- LISTADO DE CLIENTES ---");
+        System.out.println("\n--- LISTADO DE EMPLEADOS ---");
         
         boolean encontrados = false;
         
